@@ -10,7 +10,7 @@ export function BubbleSort(): void {
 
 /*
 *
-* Definition: Align big digit to small digit [... <- 14 <- 19 <- 23 <- 39]
+* Explanation: Align big digit to small digit [... <- 14 <- 19 <- 23 <- 39]
 *
 * Time complexity: O(n2); Call: Order of n square
 *

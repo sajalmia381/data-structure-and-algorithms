@@ -10,7 +10,7 @@ export function InsertionSort(): void {
 
 /*
 *
-* Definition: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
+* Explanation: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
 *
 * Time complexity: O(n2); Call: Worst Case: Order of n square, Best Case: Order of n
 *
