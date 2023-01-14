@@ -1,6 +1,3 @@
-
-
-
 export function StackPlayground(): void {
   const arr = [4, 23, 7, 39, 19, 0, 9, 14]
 
