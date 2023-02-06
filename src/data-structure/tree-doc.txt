@@ -1,0 +1,5 @@
+Tree Terminology
+Link: http://www.btechsmartclass.com/data_structures/tree-terminology.html
+
+
+Definition Of Binary Tree: Every Node must be 2 or less than 2 child node.
