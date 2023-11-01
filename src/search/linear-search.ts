@@ -11,13 +11,13 @@ export function LinerSearch(): void {
 }
 
 
-/*
-*
-* Time complexity: O(n); Call: Order of n
-*
-* Space complexity: O(1); Call: Order of 1
-*
-*/
+/**
+  *
+  * Time complexity: O(n); Call: Order of n
+  *
+  * Space complexity: O(1); Call: Order of 1
+  *
+  */
 
 function findIndex(arr: number[], target: number): number {
   let i = 0;

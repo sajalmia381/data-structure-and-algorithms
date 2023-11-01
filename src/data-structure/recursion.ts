@@ -11,12 +11,12 @@ export function Recursion(): void {
 }
 
 
-/* 
-* Name: Indirect Recursion-> Buy max number of laptop
-* Explanation: Call X method from Y method and Y method call X method
-* Time complexity: O(n); Call: Order of n for worst case, best case order 1
-* Space complexity: O(1); Call: Order of 1
-*/
+/**
+  * @description: Indirect Recursion-> Buy max number of laptop
+  * @explanation Call X method from Y method and Y method call X method
+  * @Time-complexity: O(n); Call: Order of n for worst case, best case order 1
+  * @Space-complexity: O(1); Call: Order of 1
+  */
 function buyLaptop(money: number): void {
   if (money >= laptopPrice) {
     purchase(money)
@@ -31,15 +31,13 @@ function purchase(money: number): void {
 }
 
 
-/* 
-* Name: Direct Recursion-> Get Factorial number
-* Explanation: Call method from own method
-* Time complexity: O(n); Call: Order of n for worst case, best case order 1
-* Space complexity: O(1); Call: Order of 1
-*/
+/**
+  * @description: Direct Recursion-> Get Factorial number
+  * @explanation Call method from own method
+  * @Time-complexity: O(n); Call: Order of n for worst case, best case order 1
+  * @Space-complexity: O(1); Call: Order of 1
+  */
 function factorialNumber(x: number): number {
-  if (x == 0) {
-    return 1
-  }
+  if (x == 0) return 1;
   return x * factorialNumber(x - 1)
 }

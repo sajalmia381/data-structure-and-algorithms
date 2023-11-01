@@ -8,15 +8,15 @@ export function SelectionSort(): void {
 }
 
 
-/*
-*
-* Explanation: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
-*
-* Time complexity: O(n2); Call: Order of n square
-*
-* Space complexity: O(1); Call: Order of 1
-*
-*/
+/**
+  *
+  * Explanation: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
+  *
+  * Time complexity: O(n2); Call: Order of n square
+  *
+  * Space complexity: O(1); Call: Order of 1
+  *
+  */
 function selectionSort(arr: number[]): number[] {
   let min_index: number, i: number = 0, j: number, temp: number;
   for (i; i < arr.length; i++) {

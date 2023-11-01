@@ -8,15 +8,15 @@ export function InsertionSort(): void {
 }
 
 
-/*
-*
-* Explanation: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
-*
-* Time complexity: O(n2); Call: Worst Case: Order of n square, Best Case: Order of n
-*
-* Space complexity: O(1); Call: Order of 1
-*
-*/
+/**
+  *
+  * Explanation: Align small digit to big digit [0 -> 4 -> 7 -> 9 -> ...]
+  *
+  * Time complexity: O(n2); Call: Worst Case: Order of n square, Best Case: Order of n
+  *
+  * Space complexity: O(1); Call: Order of 1
+  *
+  */
 function insertionSort(arr: number[]): number[] {
   let item: number, i: number = 1, j: number;
   for (i; i < arr.length; i++) {

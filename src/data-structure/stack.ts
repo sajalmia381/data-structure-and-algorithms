@@ -13,16 +13,14 @@ export interface IStack<T> {
   length: number;
 }
 
-
 class Stack<T> implements IStack<T> {
   private storage: T[] = [];
 
   constructor(private capacity: number = Infinity) { }
 
   push(item: T): void {
-    if (this.length === this.capacity) {
-      throw Error("Stack has reached max capacity, You can't add more item")
-    }
+    if (this.length === this.capacity) throw Error("Stack has reached max capacity, You can't add more item");
+
     this.storage.push(item)
   }
 

@@ -6,13 +6,13 @@ export function BinarySearch(): void {
 }
 
 
-/*
-*
-* Time complexity: O(log n); Call: Order of log n
-*
-* Space complexity: O(1); Call: Order of 1
-*
-*/
+/**
+  *
+  * Time complexity: O(log n); Call: Order of log n
+  *
+  * Space complexity: O(1); Call: Order of 1
+  *
+  */
 function findIndex(arr: number[], target: number): number {
   let left: number = 0,
     right: number = arr.length - 1,

@@ -40,8 +40,8 @@ interface IQueue<T> {
   pop(): T | undefined
 }
 
-/*
- * Definition: Queue Object
+/**
+ * @description Queue Object
  * @param capacity is max number of queue items, Default queue max 100 of item can be take
  */
 export class Queue<T> implements IQueue<T> {
@@ -60,14 +60,13 @@ export class Queue<T> implements IQueue<T> {
   get size(): number {
     return this._storage.length;
   };
-  /*
-   * Definition: Method implement via js build-in array method
-   * -----------------------------------------------------------
+
+  /**
+   * @description: Method implement via js build-in array method
    */
   push(item: T): T | undefined {
-    if (this.size === this._capacity) {
-      throw new Error("Storage capacity has reached MAX_LENGTH");
-    }
+    if (this.size === this._capacity) throw new Error("Storage capacity has reached MAX_LENGTH");
+    
     this._storage.push(item)
     return item
   }
@@ -82,10 +81,7 @@ export class Queue<T> implements IQueue<T> {
 // const queue = new Queue<number>(8);
 
 
-/*
- * Definition: Circular Queue
- * @param: capacity is max number of queue items, Default queue 100 of item can be take
- */
+
 interface IMyQueue<T> {
   items: T[];
   size: number;
@@ -96,6 +92,10 @@ interface IMyQueue<T> {
   dequeue(): T | undefined;
 }
 
+/**
+ * @description: Circular Queue
+ * @param: capacity is max number of queue items, Default queue 100 of item can be take
+ */
 class MyQueue<T> implements IMyQueue<T> {
   private _storage: T[] = [];
   head: number = 0;
@@ -110,46 +110,35 @@ class MyQueue<T> implements IMyQueue<T> {
   }
 
   get size(): number {
-    if (this.head < this.tail) {
-      return this.tail - this.head
-    } else if (this.head > this.tail) {
-      return (this._capacity - this.head) + this.tail + 1
-    }
+    if (this.head < this.tail) return this.tail - this.head;
+    if (this.head > this.tail) return (this._capacity - this.head) + this.tail + 1;
     return 0
   }
   
-  /*
-   * Description: Push Item To Circler Queue
+  /**
+   * @description: Push Item To Circler Queue
    * @param Item type of T
    * @return: When successfully pushed it's return item, If failed, return undefined
-   * Time Complexity: O(1)
-   * Space Complexity: O(0)
+   * @Time-Complexity: O(1)
+   * @Space-Complexity: O(0)
    */
   enqueue(item: T): T | undefined {
-    if (((this.tail + 1) % (this._capacity + 1)) === this.head) {
-      // throw new Error("Queue is full!!! Maximum capacity of storage reached!!!")
-      console.error("Queue is full!!! Maximum capacity of storage reached!!!", `Item: ${item}`)
-      return undefined
-    }
+    if (((this.tail + 1) % (this._capacity + 1)) === this.head) return undefined; // console.error("Queue is full!!! Maximum capacity of storage reached!!!", `Item: ${item}`)
     this._storage[this.tail] = item;
     this.tail = (this.tail + 1) % (this._capacity + 1)
     return item
   }
 
-  /*
-   * Description: Remove Item From Circler Queue
+  /**
+   * @description: Remove Item From Circler Queue
    * @return: When successfully remove it's return item, If failed, return undefined
-   * Time Complexity: O(1)
-   * Space Complexity: O(0)
+   * @Time-Complexity: O(1)
+   * @Space-Complexity: O(0)
    */
   dequeue(): T | undefined {
-    if (this.head === this.tail) {
-      console.error("Queue is empty!!!")
-      return undefined
-    }
+    if (this.head === this.tail) return undefined; // console.error("Queue is empty!!!")
     const item = this._storage[this.head];
     this.head = (this.head + 1) % (this._capacity + 1)
-
     return item
   }
 

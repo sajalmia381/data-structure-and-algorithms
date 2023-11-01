@@ -8,15 +8,15 @@ export function BubbleSort(): void {
 }
 
 
-/*
-*
-* Explanation: Align big digit to small digit [... <- 14 <- 19 <- 23 <- 39]
-*
-* Time complexity: O(n2); Call: Order of n square
-*
-* Space complexity: O(1); Call: Order of 1
-*
-*/
+/**
+  *
+  * Explanation: Align big digit to small digit [... <- 14 <- 19 <- 23 <- 39]
+  *
+  * Time complexity: O(n2); Call: Order of n square
+  *
+  * Space complexity: O(1); Call: Order of 1
+  *
+  */
 function bubbleSort(arr: number[]): number[] {
   let i: number = 0, j: number, temp: number;
   for (i; i < arr.length; i++) {
