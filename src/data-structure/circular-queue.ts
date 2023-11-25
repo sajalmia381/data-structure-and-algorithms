@@ -40,12 +40,12 @@ export class Queue<T> implements IQueue<T> {
   get items(): T[] {
     if (this.head < this.tail) return this._storage.slice(this.head, this.tail);
     if (this.head > this.tail) {
-      const _items = [...this._storage.slice(this.head)]
+      const _items = [...this._storage.slice(this.head)];
       if (this.tail > 0) {
-        _items.concat(this._storage.slice(0, this.tail))
-        return  _items.concat(this._storage.slice(0, this.tail))
+        _items.concat(this._storage.slice(0, this.tail));
+        return _items.concat(this._storage.slice(0, this.tail));
       }
-      return _items
+      return _items;
     }
     return [];
   }
@@ -98,7 +98,7 @@ export class Queue<T> implements IQueue<T> {
   queue.enqueue("Hola2");
   queue.enqueue("Hola3");
   console.log(queue.items); // [ 'Hola1', 'Hola2', 'Hola3' ]
-  queue.dequeue()
+  queue.dequeue();
   queue.enqueue("Hola4");
   console.log(queue.items); // [ 'Hola2', 'Hola3', 'Hola4' ]
   console.log("Actual Size: ", queue.size); // Actual Size:  3
